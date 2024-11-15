@@ -88,7 +88,7 @@ public class LoginController extends HttpServlet {
         // Attempt to sign up the customer using LoginDAO
         boolean isSignedUp = LoginDAO.signUp(customer);
         if (isSignedUp) {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("login.jsp?action=signup");
         } else {
            request.setAttribute("errorMsg", "SignUp failed enter the correct details.");
            forwardToSignUp(request,response);
@@ -177,3 +177,4 @@ public class LoginController extends HttpServlet {
         }
     }
 }
+

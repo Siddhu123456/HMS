@@ -1,4 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	boolean isSignedup = false;
+	if("signup".equals(request.getParameter("action"))) {
+		isSignedup = true;
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -112,6 +118,16 @@
     </style>
 </head>
 <body>
+	<%
+		if(isSignedup) {	
+	%>
+		<script type="text/javascript">
+			alert("Your SignUp was successfull login to continue with the page.");
+			window.location.href = "login.jsp";
+		</script>
+	<%
+		}
+	%>
     <h1>Blissful Haven</h1>
     <form action="LoginController" method="post">
         <h2>Login</h2>
@@ -145,3 +161,4 @@
     </form>
 </body>
 </html>
+
