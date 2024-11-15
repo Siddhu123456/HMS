@@ -32,7 +32,7 @@ CREATE TABLE BOOKING (
     FOREIGN KEY (room_id) REFERENCES ROOM(room_id)
 );
 
-
+abc
 CREATE TABLE OFFLINECUSTOMER (
     customer_id INT NOT NULL AUTO_INCREMENT,
     booking_id INT,
